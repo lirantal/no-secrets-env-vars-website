@@ -45,9 +45,8 @@ export default {
             "In most languages APIs, the default behavior for spawned child processes is to inhreit the environment variables data from the parent.",
             "Consider the following example:",
             `<code>
-              const { spawn } = require('child_process');
-              <br/>
-              const ls = spawn('my-program.js', ['/usr']);
+ const { spawn } = require('child_process');  
+  const ls = spawn('my-program.js', ['/usr']);  
               </code>
             `,
             "The process spawned <code>my-program.js</code> will inherit all the environment variables from <code>process.env</code> of the parent process.` This violates the least privilege principle, where-as different components should only have access to what is explicitly required from them.",

@@ -12,20 +12,20 @@
                 <v-sheet color="black" class="pt-12 pb-12" elevation="24">
                   <span
                     :class="[$vuetify.breakpoint.smAndDown ? 'display-1' : 'display-2']"
-                    class="font-weight-black"
+                    class="white--text font-weight-black"
                   >SAY NO</span>
 
                   <br />
 
                   <span
                     :class="[$vuetify.breakpoint.smAndDown ? 'display-3': 'display-2']"
-                    class="font-weight-light"
+                    class="white--text font-weight-light"
                   >TO SECRETS IN ENVIRONMENT VARIABLES</span>
                 </v-sheet>
                 <br />
                 <v-btn
                   elevation="24"
-                  class="align-self black"
+                  class="align-self black white--text"
                   outlined
                   @click="$vuetify.goTo('#about-me', {duration: 1300, easing: 'easeInQuad'})"
                 >
