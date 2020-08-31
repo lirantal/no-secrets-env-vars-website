@@ -1,28 +1,35 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <v-main>
+      <Hero />
+      <Tips />
+      <v-container class="text-center pb-10" fluid="true">
+        <span class="mr-2">Not convinced?</span>
+        <v-btn
+          color="grey"
+          href="https://github.com/lirantal/no-secrets-env-vars-website"
+          outlined
+          large
+        >
+          <span class="grey--text text--darken-1 font-weight-bold">Discuss on GitHub</span>
+        </v-btn>
+      </v-container>
+    </v-main>
+    <Footer />
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Hero from "./components/Hero";
+import Tips from "./components/Tips";
+import Footer from "./components/Footer";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
+    Hero,
+    Tips,
+    Footer
   }
-}
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
