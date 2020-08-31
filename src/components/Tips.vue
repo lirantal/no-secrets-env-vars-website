@@ -3,7 +3,7 @@
     <section v-for="(item, i) in tips" :key="i" id="about-me">
       <div class="py-12"></div>
 
-      <v-container class="text-center grey lighten-5 pb-10" fluid="true">
+      <v-container class="text-center grey lighten-5 pb-10" :fluid="true">
         <h2 class="display-5 font-weight-bold mb-8 mt-8">{{item.title}}</h2>
 
         <v-responsive class="mx-auto mb-8" width="56">

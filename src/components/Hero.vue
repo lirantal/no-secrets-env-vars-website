@@ -5,7 +5,7 @@
         :min-height="'calc(100vh - ' + $vuetify.application.top + 'px)'"
         src="https://images.unsplash.com/photo-1556865897-3e02fedb1774?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=933&q=80"
       >
-        <v-theme-provider dark>
+        <!-- <v-theme-provider dark> -->
           <v-container class="pt-10">
             <v-row align="center" class="white--text mx-auto" justify="center">
               <v-col class="white--text text-center" cols="12" tag="h1">
@@ -41,7 +41,7 @@
               </v-col>
             </v-row>
           </v-container>
-        </v-theme-provider>
+        <!-- </v-theme-provider> -->
       </v-img>
     </v-row>
   </section>

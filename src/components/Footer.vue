@@ -1,6 +1,6 @@
 <template>
   <v-card height="400px">
-    <v-footer v-bind="localAttrs" fixed padless>
+    <v-footer fixed padless>
       <v-card flat tile width="100%" class="red lighten-1 text-center">
         <v-card-text class="white--text">
           Icons made by
