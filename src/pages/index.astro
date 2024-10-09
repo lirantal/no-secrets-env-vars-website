@@ -1,95 +1,95 @@
 ---
-import Layout from '@layouts/Default.astro';
-import RecentBlogPosts from '@components/generic/RecentBlogPosts.astro';
-import MobileSocials from '@components/home/MobileSocials.astro';
-import { Pill } from '@eliancodes/brutal-ui';
-import { Button } from '@eliancodes/brutal-ui';
-import { Card } from '@eliancodes/brutal-ui';
+import Layout from "@layouts/Default.astro";
+// import RecentBlogPosts from "@components/generic/RecentBlogPosts.astro";
+import MobileSocials from "@components/home/MobileSocials.astro";
+// import { Pill } from "@eliancodes/brutal-ui";
+import { Button } from "@eliancodes/brutal-ui";
+import { Card } from "@eliancodes/brutal-ui";
 
-const builtWith = [
-  { name: 'Astro', url: 'https://astro.build/' },
-  { name: 'UnoCSS', url: 'https://uno.antfu.me/' },
+const secretsInEnvVarsProblems = [
   {
-    name: 'Content Collections',
-    url: 'https://docs.astro.build/en/guides/content-collections/',
+    title:
+      "❌ Reason 1: Secrets in Environment Variables are Likely Poorly Managed",
+    readMoreLink:
+      "https://www.nodejs-security.com/blog/do-not-use-secrets-in-environment-variables-and-here-is-how-to-do-it-better#-reason-1-secrets-in-environment-variables-are-likely-poorly-managed",
   },
-  { name: 'RSS', url: 'https://docs.astro.build/en/guides/rss/' },
   {
-    name: 'Sitemap',
-    url: 'https://docs.astro.build/en/guides/integrations-guide/sitemap/',
+    'title': '❌ Reason 2: The Blurry Line Between Frontend and Backend SSR Leaks Secrets',
+    'readMoreLink': 'https://www.nodejs-security.com/blog/do-not-use-secrets-in-environment-variables-and-here-is-how-to-do-it-better#-reason-2-the-blurry-line-between-frontend-and-backend-ssr-leaks-secrets'
   },
-  { name: 'Vercel', url: 'https://vercel.com' },
-  { name: 'TypeScript', url: 'https://www.typescriptlang.org/' },
+  {
+    'title': '❌ Reason 3: Secrets in .env Files are Too Easy to Leak',
+    'readMoreLink': 'https://www.nodejs-security.com/blog/do-not-use-secrets-in-environment-variables-and-here-is-how-to-do-it-better#-reason-3-secrets-in-env-files-are-too-easy-to-leak'
+  },
+  {
+    'title': '❌ Reason 4: Secret Data Leaked by Logs',
+    'readMoreLink': 'https://www.nodejs-security.com/blog/do-not-use-secrets-in-environment-variables-and-here-is-how-to-do-it-better#-reason-4-secret-data-leaked-by-logs'
+  },
+  {
+    'title': '❌ Reason 5: Spawned Processes Share the Same Environment by Default',
+    'readMoreLink': 'https://www.nodejs-security.com/blog/do-not-use-secrets-in-environment-variables-and-here-is-how-to-do-it-better#-reason-5-spawned-processes-share-the-same-environment-by-default'
+  },
+  {
+    'title': '❌ Reason 6: Environment Variables are Visible in Process Lists',
+    'readMoreLink': 'https://www.nodejs-security.com/blog/do-not-use-secrets-in-environment-variables-and-here-is-how-to-do-it-better#-reason-6-environment-variables-are-visible-in-process-lists'
+  },
+  {
+    'title': '❌ Reason 7: Build Arguments and .env Files Leak into Docker Images',
+    'readMoreLink': 'https://www.nodejs-security.com/blog/do-not-use-secrets-in-environment-variables-and-here-is-how-to-do-it-better#-reason-7-build-arguments-and-env-files-leak-into-docker-images'
+  }
 ];
 ---
 
 <Layout
-  title='Home'
-  pageTitle='Brutal Theme | Home'
-  description='Brutal is a minimalistic, neobrutalism theme for Astro.'
+  title="Home"
+  pageTitle="No Secrets in Environment Variables"
+  description="Say no to secrets in environment variables. They are not safe there and can be easily exposed, leaked and stolen. Here are 7 reasons why you should not use secrets in environment variables."
 >
-  <main class='bg-pink p-6'>
+  <main class="bg-pink p-6">
     <MobileSocials />
-    <section id='about' class='grid md:grid-cols-8 gap-8 mt-4'>
-      <h2 class='hidden'>About Brutal</h2>
-      <div class='col-span-4'>
-        <Card>
-          <div class='flex flex-col justify-between items-start gap-4'>
-            <p class='mt-4 outfit text-2xl md:text-5xl lg:text-7xl'>
-              Brutal theme for <a
-                class='text-white'
-                target='_blank'
-                href='https://astro.build/'>Astro</a
-              >
+    <section id="about" class="grid md:grid-cols-8 gap-8 mt-4">
+      <h2 class="hidden">Learn why managing secrets in environment variables is a bad idea</h2>
+
+      {
+        secretsInEnvVarsProblems.map((problem) => (
+          <div class="col-span-12">
+            <Card color={"#f87171"}>
+              <div class="flex flex-col justify-between items-start gap-4">
+                <p class="text-white mt-4 outfit text-2xl md:text-2xl lg:text-2xl">
+                  {problem.title}
+                </p>
+                {/* <p class='mt-2 outfit text-xl md:text-3xl lg:text-5xl'>
+                <!-- description -->
+              </p> */}
+                <Button href={problem.readMoreLink} target="_blank">
+                  Learn why this is dangerous &rarr;
+                </Button>
+              </div>
+            </Card>
+          </div>
+        ))
+      }
+    </section>
+    
+    <section id="about" class="grid md:grid-cols-8 gap-8 mt-24">
+      <div class="col-span-12">
+        <Card color="#a3e635">
+          <div class="flex flex-col justify-between items-start gap-4">
+            <p class="mt-4 outfit text-2xl md:text-2xl lg:text-2xl">
+              ✅ Do you want to learn how to better handle secrets in your applications?
             </p>
-            <p class='mt-2 outfit text-xl md:text-3xl lg:text-5xl'>
-              A minimalistic, neobrutalism theme for Astro.
-            </p>
-            <Button target={'_self'} href='/blog/'>
-              Check out the blog &rarr;
+            {/* <p class='mt-2 outfit text-xl md:text-3xl lg:text-5xl'>
+            <!-- description -->
+          </p> */}
+            <Button href="https://www.nodejs-security.com/blog/do-not-use-secrets-in-environment-variables-and-here-is-how-to-do-it-better#-reason-7-build-arguments-and-env-files-leak-into-docker-images" target="_blank">
+              ✔︎ Learn how to fix it &rarr;
             </Button>
           </div>
         </Card>
       </div>
-      <div class='col-span-2'>
-        <Card>
-          <h2 class='text-2xl md:text-4xl lg:text-6xl mb-8 dm-serif'>
-            Brutal is built with
-          </h2>
-          <ul class='flex gap-4 flex-wrap'>
-            {
-              builtWith.map((item) => (
-                <li>
-                  <Pill>
-                    <a
-                      class='sanchez'
-                      href={item.url}
-                      target='_blank'
-                      title={`Go to ${item.name}`}
-                    >
-                      {item.name}
-                    </a>
-                  </Pill>
-                </li>
-              ))
-            }
-          </ul>
-        </Card>
-      </div>
-      <div class='col-span-2'>
-        <Card>
-          <h2 class='text-2xl md:text-4xl lg:text-6xl mb-4 dm-serif'>
-            What is Brutal?
-          </h2>
-          <p class='poppins'>
-            Brutal is a theme built with Astro, UnoCSS by <a
-              href='https://www.elian.codes/'>Elian</a
-            >. It's a simple, fast, and modern theme that is easy to use and
-            customize. Mainly meant to power blogs and personal websites.
-          </p>
-        </Card>
-      </div>
     </section>
-    <RecentBlogPosts />
+
+
+    <!-- <RecentBlogPosts /> -->
   </main>
 </Layout>
