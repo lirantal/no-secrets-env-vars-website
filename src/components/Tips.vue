@@ -42,7 +42,7 @@ export default {
           title:
             "⚠️ (1) spawned processes share the same environment by default",
           description: [
-            "In most languages APIs, the default behavior for spawned child processes is to inhreit the environment variables data from the parent.",
+            "In most languages APIs, the default behavior for spawned child processes is to inherit the environment variables data from the parent.",
             "Consider the following example:",
             `<code>
  const { spawn } = require('child_process');  
