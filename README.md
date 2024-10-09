@@ -1,28 +1,3 @@
-# Brutal - The neobrutalist Astro theme
-
-Brutal is a minimal neobrutalist theme for [Astro](https://astro.build/). It's based on Neobrutalist Web Design, a movement that aims to create websites with a minimalistic and functional design. It has some integrations like Image Optimization, RSS, Sitemap, ready to get your SEO done right.
-
-The theme has no JavaScript integration out of the box, but can always be added of course.
-
-This template is based on [my own personal website](<https://www.elian.codes/>), with some more generic things added.
-
-## Usage
-
-You can bootstrap a new Astro project using Brutal with the following command:
-
-```bash
-# npm 6.x
-npx create astro@latest --template eliancodes/brutal
-
-# npm 7+
-npm create astro@latest -- --template eliancodes/brutal
-
-# pnpm
-pnpm dlx create-astro --template eliancodes/brutal
-
-# yarn
-yarn create astro --template eliancodes/brutal
-```
 
 ### Commands
 
