@@ -90,3 +90,7 @@ The theme has a few colors that you can use in the included components.
 More colors can be added in `astro.config.mjs` in the `colors` array.
 
 If you need more from this theme, don't hesitate to open an issue or reach out to me!
+
+## Contributing
+
+Please consult [CONTRIBUTING](./CONTRIBUTING.md) for guidelines on contributing to this project.
