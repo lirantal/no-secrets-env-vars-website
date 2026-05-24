@@ -5,6 +5,9 @@ import UnoCSS from 'unocss/astro';
 export default defineConfig({
   site: 'https://no-secrets-env-vars-website.vercel.app/',
   trailingSlash: 'ignore',
+  legacy: {
+    collections: true,
+  },
   integrations: [sitemap(), UnoCSS({ injectReset: true })],
   vite: {
     optimizeDeps: {
