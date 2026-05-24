@@ -2,7 +2,7 @@
   "name": "",
   "version": "1.2.0",
   "type": "module",
-  "packageManager": "pnpm@8.6.0",
+  "packageManager": "pnpm@11.0.4",
   "author": {
     "name": "Elian Van Cutsem",
     "email": "hello@elian.codes",
