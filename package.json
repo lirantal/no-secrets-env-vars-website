@@ -2,7 +2,7 @@
   "name": "",
   "version": "1.2.0",
   "type": "module",
-  "packageManager": "pnpm@8.6.0",
+  "packageManager": "pnpm@11.0.4",
   "author": {
     "name": "Elian Van Cutsem",
     "email": "hello@elian.codes",
@@ -19,9 +19,9 @@
   "dependencies": {
     "@astrojs/rss": "^4.0.7",
     "@astrojs/sitemap": "^3.1.6",
-    "@eliancodes/brutal-ui": "^0.2.3",
-    "@unocss/astro": "^0.57.7",
-    "astro": "^4.14.5",
+    "@eliancodes/brutal-ui": "^0.2.6",
+    "@unocss/astro": "^66.7.0",
+    "astro": "^5.15.8",
     "astro-font": "^0.0.80",
     "satori": "^0.5.0",
     "satori-html": "^0.3.2"
@@ -31,13 +31,13 @@
     "@iconify-json/uil": "^1.1.8",
     "@resvg/resvg-js": "^2.6.0",
     "@typescript-eslint/parser": "^6.15.0",
-    "@unocss/reset": "^0.57.7",
+    "@unocss/reset": "^66.7.0",
     "eslint": "^8.56.0",
     "eslint-plugin-astro": "^0.29.1",
     "eslint-plugin-jsx-a11y": "^6.8.0",
     "prettier": "^3.1.1",
     "prettier-plugin-astro": "^0.12.2",
     "sharp": "^0.32.6",
-    "unocss": "^0.57.7"
+    "unocss": "^66.7.0"
   }
 }
